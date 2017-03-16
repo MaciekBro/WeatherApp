@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/screen_background_dark_transparent"
+        android:gravity="center"
+        android:text="Pogoda na dzisiaj:"
+        android:textSize="40sp" />
+
+    <TextView
+
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/humidity"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        tools:text="Warszawa" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_toRightOf="@+id/icon"
+        android:textSize="65sp"
+        tools:text="35'" />
+
+    <TextView
+        android:id="@+id/wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature"
+        android:layout_toRightOf="@+id/icon"
+        android:textSize="40sp"
+        tools:text="30 km/h" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wind"
+        android:layout_toRightOf="@+id/icon"
+        android:textSize="40sp"
+        tools:text="40%" />
+
+    <ImageView
+
+        android:id="@+id/icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/search_button"
+        android:layout_below="@+id/city"
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="what City?" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_search_black_24dp" />
+
+</RelativeLayout>
+
+</ScrollView>
